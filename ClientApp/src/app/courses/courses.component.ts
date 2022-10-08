@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {CoursesService} from '../courses.service'
+
 
 @Component({
   selector: 'app-courses',
@@ -6,6 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent{
+  constructor(private course:CoursesService){}
+  courseData: any=[];
+  ngOnInit():void{
+    this.course.getAllCourses().subscribe((allData)=>{
+      console.log(allData);
+
+      this.courseData=allData;
+      
+    })
+  }
+
+
   courses = [
     { id:101, name:'JavaScript for beginners', author: 'John Heikela', duration: 48, type: 'Free', 
       price: 0.00, ratings: 3.5, image:'assets/courses/course-image-1.jpeg',
@@ -46,7 +60,7 @@ export class CoursesComponent{
   ]
 
   getTotalCourses(){
-    return this.courses.length;
+    return this.courseData.length;
   }
   getTotalFreeCourses(){
     return this.courses.filter(course => course.type === 'Free').length;
