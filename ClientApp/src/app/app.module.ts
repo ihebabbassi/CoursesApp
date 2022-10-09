@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
 import { FormsModule } from '@angular/forms';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     HeaderComponent,
     SearchComponent,
-    FilterComponent
+    FilterComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
