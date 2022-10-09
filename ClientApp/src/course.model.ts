@@ -1,5 +1,5 @@
 export interface course{
-    id:number;
+    id?:number;
     name:string;
     author:string;
     duration: number;
