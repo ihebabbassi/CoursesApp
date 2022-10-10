@@ -1,102 +1,125 @@
-<div>
-    <div class="submit-form">
-      <div *ngIf="!submitted">
-        <div class="form-group">
-          <label for="name">name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            required
-            [(ngModel)]="Course.name"
-            name="name"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="description">Description</label>
-          <input
-            class="form-control"
-            id="description"
-            required
-            [(ngModel)]="Course.description"
-            name="description"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="author">author</label>
-          <input
-            class="form-control"
-            id="author"
-            required
-            [(ngModel)]="Course.author"
-            name="author"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="price">price</label>
-          <input
-            class="form-control"
-            id="price"
-            required
-            [(ngModel)]="Course.price"
-            name="price"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="type">type</label>
-          <input
-            class="form-control"
-            id="type"
-            required
-            [(ngModel)]="Course.type"
-            name="type"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="duration">duration</label>
-          <input
-            class="form-control"
-            id="duration"
-            required
-            [(ngModel)]="Course.duration"
-            name="duration"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="ratings">ratings</label>
-          <input
-            class="form-control"
-            id="ratings"
-            required
-            [(ngModel)]="Course.ratings"
-            name="ratings"
-          />
-        </div>
-  
-        <div class="form-group">
-          <label for="image">image</label>
-          <input
-            class="form-control"
-            id="image"
-            required
-            [(ngModel)]="Course.image"
-            name="image"
-          />
-        </div>
-  
-        <button (click)="saveCourse()" class="btn btn-success">Submit</button>
+<form>
+  <div *ngIf="!submitted">
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="text">name</label>
+      <div class="col-8">
+        <input
+          id="name"
+          name="name"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.name"
+        />
       </div>
-  
-      <div *ngIf="submitted">
-        <h4>Tutorial was submitted successfully!</h4>
-        <button class="btn btn-success" (click)="newCourse()">Add</button>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="Description">Description</label>
+      <div class="col-8">
+        <input
+          id="description"
+          name="description"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.description"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="author">author</label>
+      <div class="col-8">
+        <input
+          id="author"
+          name="author"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.author"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="price">price</label>
+      <div class="col-8">
+        <input
+          id="price"
+          name="price"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.price"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="type">type</label>
+      <div class="col-8">
+        <input
+          id="type"
+          name="type"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.type"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="duration">duration</label>
+      <div class="col-8">
+        <input
+          id="duration"
+          name="duration"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.duration"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="ratings">ratings</label>
+      <div class="col-8">
+        <input
+          id="ratings"
+          name="ratings"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.ratings"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4 col-form-label" for="image">image</label>
+      <div class="col-8">
+        <input
+          id="image"
+          name="image"
+          type="text"
+          class="form-control"
+          required
+          [(ngModel)]="Course.image"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-4 col-8">
+        <button
+          (click)="saveCourse()"
+          name="submit"
+          type="submit"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
       </div>
     </div>
   </div>
-  
+  <div *ngIf="submitted">
+    <h4>Tutorial was submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newCourse()">Add</button>
+  </div>
+</form>
