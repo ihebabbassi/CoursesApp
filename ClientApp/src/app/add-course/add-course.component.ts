@@ -8,7 +8,6 @@ import{CoursesService} from './../courses.service'
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent implements OnInit {
-
   Course: course = {
     name:"",
     author:"",
