@@ -98,17 +98,7 @@
         "ratings": 4.8,
         "image": "assets/courses/course-image-9.jpeg",
         "description": "In this course you will learn about reactive web development using HTML & CSS. This course will start teaching you from basics of HTML & CSS and as you progress, you will learn all the advance concepts."
-      },
-      {
-        "title": "angular",
-        "author": "ttttttt",
-        "type": "ttttttt",
-        "duration": "11",
-        "price": "111",
-        "ratings": "10",
-        "image": "ezezez",
-        "description": "testtttttttt",
-        "id": 110
       }
+      
     ]
   }
