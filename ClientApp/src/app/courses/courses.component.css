@@ -1,5 +1,6 @@
 .course-container{
     display: inline-flex;
+    padding-bottom: 50px;
 }
 
 .course-card{
