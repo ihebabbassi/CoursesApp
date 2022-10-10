@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
     FilterComponent,
     HeaderComponent,
     SearchComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
