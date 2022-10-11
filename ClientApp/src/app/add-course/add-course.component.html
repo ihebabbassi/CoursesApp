@@ -1,3 +1,5 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+
 <h1>Add course</h1>
 <form class="form-container">
   <div *ngIf="!submitted">
@@ -124,3 +126,8 @@
     <button class="btn btn-success" (click)="newCourse()">Add</button>
   </div>
 </form>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

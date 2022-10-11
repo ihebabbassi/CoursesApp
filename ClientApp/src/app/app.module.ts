@@ -11,6 +11,9 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { ProviderDashboardComponent } from './provider-dashboard/provider-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     HeaderComponent,
     SearchComponent,
     AddCourseComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    SignupComponent,
+    LoginComponent,
+    ProviderDashboardComponent
   ],
   imports: [
     BrowserModule,

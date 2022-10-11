@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{course} from '../course.model'
 import{CoursesService} from './../courses.service'
+import {TokenStorageService} from "./../services/token-storage.service"
+
 
 @Component({
   selector: 'app-add-course',
@@ -8,6 +10,8 @@ import{CoursesService} from './../courses.service'
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent implements OnInit {
+  currentUser: any;
+
   Course: course = {
     name:"",
     author:"",
@@ -20,9 +24,10 @@ export class AddCourseComponent implements OnInit {
   };
   submitted = false;
 
-  constructor(private coursesService:CoursesService) { }
+  constructor(private coursesService:CoursesService , private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
+    this.getCurrentUser()
   }
 
 
@@ -36,6 +41,8 @@ export class AddCourseComponent implements OnInit {
       ratings: this.Course.ratings,
       image: this.Course.image,
       description: this.Course.description,
+      providerId: this.currentUser.id
+      
     };
 
     this.coursesService.create(data)
@@ -51,7 +58,7 @@ export class AddCourseComponent implements OnInit {
   newCourse(): void {
     this.submitted = false;
     this.Course = {
-      name:"",
+    name:"",
     author:"",
     duration: 0,
     type: "",
@@ -62,6 +69,11 @@ export class AddCourseComponent implements OnInit {
     };
   }
 
+  getCurrentUser(){
 
+    this.currentUser = this.tokenStorage.getUser().user;
+    console.log("this.currentUser",this.currentUser);
+
+ }
 
 }
