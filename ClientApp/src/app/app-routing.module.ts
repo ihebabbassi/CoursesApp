@@ -6,14 +6,20 @@ import {CourseDetailsComponent} from './course-details/course-details.component'
 import {SignupComponent} from './signup/signup.component'
 import { LoginComponent } from './login/login.component';
 import { ProviderDashboardComponent } from './provider-dashboard/provider-dashboard.component';
+import { WaitApprovementComponent  } from './wait-approvement/wait-approvement.component';
+import {ApprovementGuard} from "./approvement.guard"
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  {path: 'courses', component: CoursesComponent},
-  {path: 'addcourse', component:AddCourseComponent},
-  {path: 'coursedetail/:id', component:CourseDetailsComponent},
+  {path: 'courses', component: CoursesComponent, canActivate : [ApprovementGuard]},
+  {path: 'addcourse', component:AddCourseComponent,canActivate : [ApprovementGuard]},
+  {path: 'coursedetail/:id', component:CourseDetailsComponent, canActivate : [ApprovementGuard]},
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'dashboard', component: ProviderDashboardComponent},
+  {path: 'dashboard', component: ProviderDashboardComponent, canActivate : [ApprovementGuard]},
+  {path: 'wait-approvement', component: WaitApprovementComponent },
+  {path: 'admin', component: AdminComponent},
+
 
 
 

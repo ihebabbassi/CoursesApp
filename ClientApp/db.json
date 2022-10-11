@@ -110,6 +110,18 @@
       "description": "akrez framework f denya ",
       "providerId": 17,
       "id": 110
+    },
+    {
+      "title": "fdffddffd",
+      "author": "dfdffdfd",
+      "type": "free",
+      "duration": "15",
+      "price": "14141414",
+      "ratings": "44",
+      "image": "https://static.javatpoint.com/springboot/images/spring-boot-tutorial.jpg",
+      "description": "fdfdfddffd",
+      "providerId": 17,
+      "id": 111
     }
   ],
   "users": [
@@ -271,6 +283,16 @@
       "role": "provider",
       "Activation": false,
       "id": 18
+    },
+    {
+      "email": "iheb@abbassi.com",
+      "password": "$2a$10$Hx.X.kusnJBR8F6pIyqDze2eCyvL1tjsD6OgYNRa7.GHWevWRhJV.",
+      "name": "iheb",
+      "address": "ddddd",
+      "center_name": "wedyor",
+      "role": "provider",
+      "Activation": false,
+      "id": 19
     }
   ]
 }

@@ -14,6 +14,8 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProviderDashboardComponent } from './provider-dashboard/provider-dashboard.component';
+import { WaitApprovementComponent } from './wait-approvement/wait-approvement.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProviderDashboardComponent } from './provider-dashboard/provider-dashbo
     CourseDetailsComponent,
     SignupComponent,
     LoginComponent,
-    ProviderDashboardComponent
+    ProviderDashboardComponent,
+    WaitApprovementComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
