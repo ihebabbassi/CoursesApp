@@ -1,12 +1,34 @@
-<h1>Rani a9wa deigner f denya :p</h1>
-<ul>
-    <li>{{Course.name }}</li>
+<!-- Page Content -->
+<div class="container">
 
-    <li>{{Course.author }}</li>
-    <li>{{Course.price }}$</li>
-    <li>{{Course.description }}</li>
-    <li>{{Course.duration }}</li>
-    <li>{{Course.ratings }}</li>
-    <li>{{Course.type }}</li>
-    <li><img [src]="Course.image" style="width: 220px; height: 140px" /></li>
-</ul>
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4">{{Course.name }} By
+      <small>{{Course.name }}</small>
+    </h1>
+  
+    <!-- Portfolio Item Row -->
+    <div class="row">
+  
+      <div class="col-md-8">
+        <img class="img-fluid" [src]="Course.image" alt="">
+      </div>
+  
+      <div class="col-md-4">
+        <h3 class="my-3">Course Description</h3>
+        <p>{{Course.description }}</p>
+        <h3 class="my-3">Project Details</h3>
+        <ul>
+          <li><strong>Course Author:</strong> {{Course.author }}</li>
+          <li><strong>Course price:</strong> {{Course.price }}$</li>
+          <li><strong> duration:</strong> {{Course.duration }}</li>
+          <li><strong> ratings:</strong> {{Course.ratings }}</li>
+          <li><strong> Type: {{Course.type }}</strong> </li>
+        </ul>
+      </div>
+  
+    </div>
+  
+  
+  </div>
+  <!-- /.container -->
+  
