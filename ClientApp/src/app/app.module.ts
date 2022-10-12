@@ -12,7 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { BookCourseComponent } from './book-course/book-course.component';
-
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { ProviderDashboardComponent } from './provider-dashboard/provider-dashboard.component';
+import { WaitApprovementComponent } from './wait-approvement/wait-approvement.component';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,12 @@ import { BookCourseComponent } from './book-course/book-course.component';
     SearchComponent,
     AddCourseComponent,
     CourseDetailsComponent,
-    BookCourseComponent
+    BookCourseComponent,
+    SignupComponent,
+    LoginComponent,
+    ProviderDashboardComponent,
+    WaitApprovementComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
