@@ -15,6 +15,9 @@ export class AdminService {
     return this.http.get(this.url,{params:params1});
   }
 
+  approveProvider(id: number){
+    this.http.patch(this.url + id, true)    
+  }
 
 
 

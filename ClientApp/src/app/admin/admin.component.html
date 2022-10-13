@@ -1,1 +1,30 @@
-<p>admin works!</p>
+<table class="table table-bordered">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Center Name</th>
+      <th scope="col">Representor</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{ user.center_name }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.id }}</td>
+      <td class="text-left edit-block">
+        <button
+          type="button"
+          class="btn btn-success"
+          
+        >
+          Approve
+        </button>
+
+        <!-- <button type="button" class="btn btn-primary">Review</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
