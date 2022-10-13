@@ -15,16 +15,11 @@
       <td>{{ user.email }}</td>
       <td>{{ user.id }}</td>
       <td class="text-left edit-block">
-        <button
-          type="button"
-          class="btn btn-success"
-          
-        >
-          Approve
-        </button>
+    <button type="button" class="btn btn-success"(click)="approveProvider(users[i].id)">Approve</button>
 
-        <!-- <button type="button" class="btn btn-primary">Review</button> -->
-      </td>
+
+      </td>    
+
     </tr>
   </tbody>
 </table>
