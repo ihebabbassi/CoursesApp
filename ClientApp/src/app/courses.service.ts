@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {course} from './course.model'
 @Injectable({
@@ -15,17 +15,19 @@ export class CoursesService {
 
   getCourseByID(id:any): Observable<any> {
     return this.http.get('http://localhost:3000/courses/' +id)  
-
-    
   } 
-  
+
+  getProviderCourses(id:number): Observable<any> {
+    let params1= new HttpParams().set('providerId',id);
+    return this.http.get(this.url,{params:params1});
+  }
 
   create(data: any): Observable<any> {
     return this.http.post(this.url, data);
   }
 
- // delete(id: any): Observable<any> {
-   // return this.http.delete(`${this.url}/${id}`);}
+ delete(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);}
 
 
 

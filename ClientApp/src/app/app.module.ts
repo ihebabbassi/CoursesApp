@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { ProviderDashboardComponent } from './provider-dashboard/provider-dashboard.component';
 import { WaitApprovementComponent } from './wait-approvement/wait-approvement.component';
 import { AdminComponent } from './admin/admin.component';
+import { UpdateCourseComponent } from './update-course/update-course.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     ProviderDashboardComponent,
     WaitApprovementComponent,
-    AdminComponent
+    AdminComponent,
+    UpdateCourseComponent
   ],
   imports: [
     BrowserModule,

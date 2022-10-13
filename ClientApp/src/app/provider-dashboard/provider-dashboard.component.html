@@ -40,6 +40,47 @@
       </p>
   </div>
   
+<h5>//////////////////////////////////////////</h5>
+  <ng-container *ngFor="let course of courseData">
+    <!-- courseCountRadioButton === 'All' || courseCountRadioButton === course.type -->
+    <div
+      class="course-container"    >
+      <div class="course-card">
+        <div>
+          <img [src]="course.image" style="width: 220px; height: 140px" />
+        </div>
+        <div class="course-name">
+          <h4>{{ course.name }}</h4>
+        </div>
+        <div class="course-description">
+          <p>{{ course.description.slice(0, 80) }}...</p>
+        </div>
+        <div class="details">
+          <div
+            class="course-type"
+            [ngStyle]="{ color: course.type === 'Free' ? 'Green' : 'Red' }"
+          >
+            {{ course.type }}
+          </div>
+          <div class="course-price"><b>Price:</b> ${{ course.price }}</div>
+        </div>
+        <div class="course-buttons">
+          <button class="btn btn-buy"   (click)="deleteCourse(course.id)">
+            DELETE
+          </button>
+          <button
+            class="btn btn-show"
+            [routerLink]="['/update-course', course.id]"
+          >
+            Update          </button>
+        </div>
+      </div>
+    </div>
+/////////////////
+  </ng-container>
+  
+
+
   <ng-template #loggedOut>
     Please login.
   </ng-template>
