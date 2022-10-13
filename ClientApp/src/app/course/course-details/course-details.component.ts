@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { course } from '../course.model';
-import { CoursesService } from './../courses.service';
+import { course } from '../../model/course.model';
+import { CoursesService } from '../../services/courses.service';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+
 @Component({
-  selector: 'app-update-course',
-  templateUrl: './update-course.component.html',
-  styleUrls: ['./update-course.component.css']
+  selector: 'app-course-details',
+  templateUrl: './course-details.component.html',
+  styleUrls: ['./course-details.component.css'],
 })
-export class UpdateCourseComponent implements OnInit {
+export class CourseDetailsComponent implements OnInit {
+  selectedCourse: any;
 
   Course: course;
-  constructor( private coursesService: CoursesService,
-    private activatedRoute: ActivatedRoute,) { }
+  constructor(
+    private coursesService: CoursesService,
+    private activatedRoute: ActivatedRoute,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe({
@@ -28,5 +34,4 @@ export class UpdateCourseComponent implements OnInit {
       console.log('this.Course', this.Course);
     });
   }
-
 }
