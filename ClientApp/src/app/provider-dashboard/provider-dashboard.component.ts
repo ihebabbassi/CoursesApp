@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TokenStorageService} from "./../services/token-storage.service"
+import {CoursesService} from './../courses.service'
+import {course} from '../course.model'
 
 @Component({
   selector: 'app-provider-dashboard',
@@ -8,11 +10,13 @@ import {TokenStorageService} from "./../services/token-storage.service"
 })
 export class ProviderDashboardComponent implements OnInit {
 
-  constructor(private tokenStorage: TokenStorageService) { }
+  constructor(private tokenStorage: TokenStorageService , private coursesService: CoursesService) { }
   currentUser: any;
-
+  courseData: any=[];
+  
   ngOnInit(): void {
-    this.getCurrentUser()
+    this.getCurrentUser();
+    this.getProviderCourses();
   }
 
   logout(){
@@ -25,4 +29,20 @@ export class ProviderDashboardComponent implements OnInit {
      console.log("this.currentUser",this.currentUser);
 
   }
-}
+  getProviderCourses(){
+   this.coursesService.getProviderCourses(this.currentUser.id).subscribe((data)=>{
+    console.log('data', data)
+    this.courseData=data;
+    console.log('this.courseData', this.courseData)
+    ;})  }
+
+
+
+    deleteCourse(id:number){
+      this.coursesService.delete(id).subscribe(res => {
+           console.log('Post deleted successfully!' , res);
+      })
+    }
+
+
+  }
