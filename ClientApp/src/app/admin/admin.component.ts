@@ -13,10 +13,16 @@ users: User[]= [];
   constructor(private adminService:AdminService, private http  : HttpClient) { }
   x:any;
   ngOnInit(): void {
+    this.getProviderNotActivated();
+    this.adminService.approveProvider(1);
   }
 
   getProviderNotActivated(){
-    this.adminService.getUserStatus("false").subscribe((data)=>{console.log(data);})
+    this.adminService.getUserStatus("false").subscribe((data)=>{console.log(data);
+    this.users=data;})
+    
+  }
+  approveProvider(id:number){
     
   }
 
