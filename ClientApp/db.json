@@ -115,12 +115,12 @@
   "users": [
     {
       "email": "omarjlassi454@fmail.com",
-      "password": "$2a$10$86HSK4zbCHrdvIkRjG6ble/QU043vgmYpwriNdN8nCYYHAOOlQTOm",
-      "name": "omar",
+      "password": "$2a$10$tW0QsKbQV/v5S9Qtt7S1jOZFDeHJR4H6WNVDbK/Px1ikKunAbJE9i",
+      "name": true,
       "address": "jlassi",
       "center_name": "GoMyCode",
       "role": "provider",
-      "Activation": false,
+      "Activation": true,
       "id": 1
     },
     {
