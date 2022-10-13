@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { course } from '../course.model';
-import { CoursesService } from './../courses.service';
+import { course } from '../../model/course.model';
+import { CoursesService } from '../../services/courses.service';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
-
 @Component({
-  selector: 'app-course-details',
-  templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.css'],
+  selector: 'app-update-course',
+  templateUrl: './update-course.component.html',
+  styleUrls: ['./update-course.component.css'],
 })
-export class CourseDetailsComponent implements OnInit {
-  selectedCourse: any;
-
+export class UpdateCourseComponent implements OnInit {
   Course: course;
   constructor(
     private coursesService: CoursesService,
-    private activatedRoute: ActivatedRoute,
-    private route: ActivatedRoute,
-    private router: Router
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
