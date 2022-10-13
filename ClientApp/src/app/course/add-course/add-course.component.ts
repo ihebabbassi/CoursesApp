@@ -34,7 +34,7 @@ export class AddCourseComponent implements OnInit {
 
   saveCourse(): void {
     const data = {
-      title: this.Course.name,
+      name: this.Course.name,
       author: this.Course.author,
       type: this.Course.type,
       duration: this.Course.duration,

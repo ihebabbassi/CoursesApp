@@ -38,9 +38,5 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  getProviderBydId(id: number){
-    this.adminService.getProuviderById(id).subscribe((data) => {
-      console.log('data',data);
-    });
-  }
+  
 }
