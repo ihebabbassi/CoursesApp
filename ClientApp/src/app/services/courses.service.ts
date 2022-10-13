@@ -29,4 +29,9 @@ export class CoursesService {
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
+
+  update(id:number, data:any): Observable<any> {
+    return this.http.put(`${this.url}/${id}`, data);
+  }  
+
 }

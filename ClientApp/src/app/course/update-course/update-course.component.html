@@ -1,4 +1,107 @@
 <p>update-course works!</p>
-<form>
+<div class="container">
+    <h1>Update Course</h1>
+   
+          
+    <form [formGroup]="form"  (ngSubmit)="updateCourse()">
     
-</form>
+        <div class="form-group">
+            <label for="name">name:</label>
+            <input 
+                formControlName="name"
+                 id="name" 
+                type="text" 
+                [(ngModel)]="Course.name"
+                class="form-control">
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">name is required.</div>
+            </div>
+        </div>
+           
+        <div class="form-group">
+            <label for="author">author</label>
+            <textarea 
+                formControlName="author"
+                id="author" 
+                type="text" 
+                [(ngModel)]="Course.author"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['author'].touched && f['author'].invalid" class="alert alert-danger">
+                <div *ngIf="f['author'].errors && f['author'].errors['required']">author is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">description</label>
+            <textarea 
+                formControlName="description"
+                id="description" 
+                type="text" 
+                [(ngModel)]="Course.description"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="image">image</label>
+            <textarea 
+                formControlName="image"
+                id="image" 
+                type="text" 
+                [(ngModel)]="Course.image"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['image'].touched && f['image'].invalid" class="alert alert-danger">
+                <div *ngIf="f['image'].errors && f['image'].errors['required']">image is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">price</label>
+            <textarea 
+                formControlName="price"
+                id="price" 
+                type="text" 
+                [(ngModel)]="Course.price"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['price'].touched && f['price'].invalid" class="alert alert-danger">
+                <div *ngIf="f['price'].errors && f['price'].errors['required']">price is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">duration</label>
+            <textarea 
+                formControlName="duration"
+                id="duration" 
+                type="text" 
+                [(ngModel)]="Course.duration"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['duration'].touched && f['duration'].invalid" class="alert alert-danger">
+                <div *ngIf="f['duration'].errors && f['duration'].errors['duration']">duration is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="type">type</label>
+            <textarea 
+                formControlName="type"
+                id="type" 
+                type="text" 
+                [(ngModel)]="Course.type"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['type'].touched && f['type'].invalid" class="alert alert-danger">
+                <div *ngIf="f['type'].errors && f['type'].errors['required']">type is required.</div>
+            </div>
+        </div>
+         
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid"  >Update</button>
+    </form>
+</div>

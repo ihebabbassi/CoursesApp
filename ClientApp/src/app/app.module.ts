@@ -8,7 +8,7 @@ import { CoursesComponent } from './course/courses-list/courses.component';
 import { FilterComponent } from './filter/filter.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddCourseComponent } from './course/add-course/add-course.component';
 import { CourseDetailsComponent } from './course/course-details/course-details.component';
 import { BookCourseComponent } from './course/book-course/book-course.component';
@@ -35,7 +35,7 @@ import { UpdateCourseComponent } from './course/update-course/update-course.comp
     AdminComponent,
     UpdateCourseComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
