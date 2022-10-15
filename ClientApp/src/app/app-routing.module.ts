@@ -11,6 +11,8 @@ import { WaitApprovementComponent } from './provider/wait-approvement/wait-appro
 import { AdminComponent } from './admin/admin.component';
 import { ApprovementGuard } from './guards/approvement.guard';
 import { UpdateCourseComponent } from './course/update-course/update-course.component';
+import { StudntSignupComponent } from './auth/studnt-signup/studnt-signup.component';
+import{DashboardStudentComponent} from './student/dashboard-student/dashboard-student.component'
 
 const routes: Routes = [
   { path: 'courses', component: CoursesComponent },
@@ -23,6 +25,10 @@ const routes: Routes = [
   { path: 'wait-approvement', component: WaitApprovementComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'update-course/:id', component: UpdateCourseComponent },
+  { path: 'student-signup', component: StudntSignupComponent },
+  { path: 'student-dashboard', component: DashboardStudentComponent },
+
+
 ];
 
 @NgModule({

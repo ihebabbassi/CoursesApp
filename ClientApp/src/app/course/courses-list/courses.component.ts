@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CoursesService } from '../../services/courses.service';
 import { course } from '../../model/course.model';
+import { TokenStorageService } from '../../services/token-storage.service';
 
 @Component({
   selector: 'app-courses',
@@ -8,7 +9,10 @@ import { course } from '../../model/course.model';
   styleUrls: ['./courses.component.css'],
 })
 export class CoursesComponent {
-  constructor(private course: CoursesService) {}
+
+  constructor(private course: CoursesService,    private tokenStorage: TokenStorageService ) {}
+    currentUser: any;
+    role:string;
   courses: course[] = [];
   courseData: any = [];
   ngOnInit(): void {
@@ -16,6 +20,7 @@ export class CoursesComponent {
       console.log(allData);
       this.courseData = allData;
     });
+    this.getCurrentUser();
   }
   getTotalCourses() {
     return this.courseData.length;
@@ -38,5 +43,16 @@ export class CoursesComponent {
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
     //console.log(this.searchText);
+  }
+  logout() {
+    return this.tokenStorage.signOut();
+  }
+
+  getCurrentUser() {
+    this.currentUser = this.tokenStorage.getUser().user;
+    this.role = this.currentUser.role
+    console.log('this.currentUser', this.currentUser);
+    console.log('this.role', this.role);
+
   }
 }

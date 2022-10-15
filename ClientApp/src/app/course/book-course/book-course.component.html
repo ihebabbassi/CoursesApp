@@ -1,1 +1,27 @@
 <p>book-course works!</p>
+ <!-- Portfolio Item Row -->
+ <div class="row">
+  
+    <div class="col-md-8">
+      <img class="img-fluid" [src]="Course.image" alt="">
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="my-3">Course Description</h3>
+      <p>{{Course.description }}</p>
+      <h3 class="my-3">Project Details</h3>
+      <ul>
+        <li><strong>Course Author:</strong> {{Course.author }}</li>
+        <li><strong>Course price:</strong> {{Course.price }}$</li>
+        <li><strong> Duration:</strong> {{Course.duration }}</li>
+        <li><strong> Ratings:</strong> {{Course.ratings }}</li>
+        <li><strong> Type: </strong> {{Course.type }} </li>
+      </ul>
+      
+   are u shure u want to book this course 
+   <button class="btn btn-success"  (click)="bookNow()">BOOK NOW</button>
+
+</div>
+
+
+  </div>
