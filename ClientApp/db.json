@@ -132,6 +132,21 @@
       "role": "provider",
       "Activation": false,
       "id": 2
+    },
+    {
+      "email": "test40@gmail.com",
+      "password": "$2a$10$u.oE0U1LNOeaUBVrrcoG5uxN8DH4l1qNY5mfYMCdmjFe5BRfm0T6y",
+      "name": "omar",
+      "address": "gg",
+      "role": "Student",
+      "id": 3
+    }
+  ],
+  "Booking": [
+    {
+      "studentid": 3,
+      "couseid": "102",
+      "id": 111
     }
   ]
 }
