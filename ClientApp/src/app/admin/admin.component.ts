@@ -9,34 +9,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
-  users:any = [];
+  users: any = [];
   constructor(private adminService: AdminService, private http: HttpClient) {}
-  name: "aaa";
+  name: 'aaa';
   baseURL = 'http://localhost:3000/users';
   ngOnInit(): void {
     this.getProviderNotActivated();
-    
-    
-    
   }
 
   getProviderNotActivated() {
     this.adminService.getUserStatus('false').subscribe((data) => {
-      
       this.users = data;
       console.log('users', this.users);
     });
   }
 
-  approveProvider(id: number) { 
-    let body:any;
-    body={
-      Activation: true
-    }
+  approveProvider(id: number) {
+    let body: any;
+    body = {
+      Activation: true,
+    };
     this.http.patch(this.baseURL + '/' + id, body).subscribe((data) => {
-      console.log('udpated',data);
+      console.log('udpated', data);
     });
   }
-
-  
 }
