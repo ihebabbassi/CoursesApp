@@ -55,7 +55,11 @@ export class SignupComponent implements OnInit {
       password: '',
       role: 'provider',
       Activation: false,
-      center_name: '',
+      center_name: ''
     };
+  }
+
+  navigateToDsignupstudent() {
+    this.router.navigateByUrl('/student-signup');
   }
 }

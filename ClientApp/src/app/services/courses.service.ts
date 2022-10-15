@@ -26,6 +26,11 @@ export class CoursesService {
     return this.http.post(this.url, data);
   }
 
+  booknow(data: any): Observable<any> {
+    return this.http.post('http://localhost:3000/Booking', data);
+  }
+
+
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }

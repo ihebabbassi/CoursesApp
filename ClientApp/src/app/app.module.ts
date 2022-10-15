@@ -18,6 +18,9 @@ import { ProviderDashboardComponent } from './provider/provider-dashboard/provid
 import { WaitApprovementComponent } from './provider/wait-approvement/wait-approvement.component';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateCourseComponent } from './course/update-course/update-course.component';
+import { StudntSignupComponent } from './auth/studnt-signup/studnt-signup.component';
+import { DashboardStudentComponent } from './student/dashboard-student/dashboard-student.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,8 @@ import { UpdateCourseComponent } from './course/update-course/update-course.comp
     WaitApprovementComponent,
     AdminComponent,
     UpdateCourseComponent,
+    StudntSignupComponent,
+    DashboardStudentComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
