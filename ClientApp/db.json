@@ -108,9 +108,6 @@
       "providerId": 2,
       "id": 9
     }
-    
-    
-    
   ],
   "users": [
     {
@@ -124,22 +121,28 @@
       "id": 1
     },
     {
-      "email": "pornhub@gmail.com",
-      "password": "$2a$10$Ql7zQKZPJKqKcHKFym2pP.Bf6wNqy4fbW3b2QjyNkv4b2Oi1GCxHm",
-      "name": "angular",
-      "address": "gg",
-      "center_name": "gg",
-      "role": "provider",
-      "Activation": false,
-      "id": 2
-    },
-    {
       "email": "test40@gmail.com",
       "password": "$2a$10$u.oE0U1LNOeaUBVrrcoG5uxN8DH4l1qNY5mfYMCdmjFe5BRfm0T6y",
       "name": "omar",
       "address": "gg",
       "role": "Student",
       "id": 3
+    },
+    {
+      "email": "iheb@gmail.com",
+      "password": "$2a$10$Tzr81qPJxTZNO2Ta6PCcDeCCDvnFVf8egQ6c5uUEiFoQ1pzbyWMqq",
+      "name": "iheb",
+      "address": "ariana",
+      "role": "Student",
+      "id": 4
+    },
+    {
+      "email": "iheb2@gmail.com",
+      "password": "$2a$10$QIPAkpGGMaaGYOw5Rg/JS.f.lnRDBP16DRkOaGEa2/Ened.nQmBO.",
+      "name": "iheb",
+      "address": "fsdf",
+      "role": "Student",
+      "id": 5
     }
   ],
   "Booking": [
@@ -147,6 +150,11 @@
       "studentid": 3,
       "couseid": "102",
       "id": 111
+    },
+    {
+      "studentid": 5,
+      "couseid": "1",
+      "id": 112
     }
   ]
 }
